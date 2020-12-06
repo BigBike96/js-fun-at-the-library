@@ -7,18 +7,18 @@ function buildMainCharacter(name, age, pronouns) {
    name: name,
    age: age,
    pronouns: pronouns
-};
+ }
   return mainCharacter;
 }
 
-function saveReview(addReview, reviews) {
-  if(!reviews.includes(addReview)) {
-    reviews.push(addReview);
+function saveReview(newReview, reviews) {
+  if(!reviews.includes(newReview)) {
+    reviews.push(newReview);
  }
 }
 
-function calculatePageCount(bookTitle) {
-  return bookTitle.length * 20;
+function calculatePageCount(title) {
+  return title.length * 20;
 }
 
 function writeBook(createTitle, buildMainCharacter, genre) {
@@ -26,15 +26,14 @@ function writeBook(createTitle, buildMainCharacter, genre) {
     title: createTitle,
     mainCharacter: buildMainCharacter,
     pageCount: calculatePageCount(createTitle),
-    genre: `fantasy`
+    genre: genre
   }
   return book;
 }
 
 function editBook(book) {
-  return book.pageCount = (book.pageCount * .75);
+  book.pageCount *= .75;
 }
-
 
 module.exports = {
   createTitle,
