@@ -4,9 +4,13 @@ function shelfBook(book, sciFiShelf) {
  }
 }
 
+function unshelfBook(book, sciFiShelf) {
+    sciFiShelf.splice(1,1);
+}
+
 module.exports = {
    shelfBook,
-  // unshelfBook,
+   unshelfBook,
   // listTitles,
   // searchShelf
 };
