@@ -24,7 +24,7 @@ function searchShelf(shelf, titles) {
   if (shelfed.includes(titles)) {
     return true
     } else {
-      return false
+    return false
   }
 }
 
